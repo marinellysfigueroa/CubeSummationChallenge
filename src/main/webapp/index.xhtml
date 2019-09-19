@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="css/style.css" />
+
+    </h:head>
+    <h:body>
+        <header><img src="img/logo-xpertgruop.png" /></header>
+        <h1>Desafío de suma de cubos</h1>
+        <h:form>
+            <h:panelGrid columns="2" cellpadding="5" styleClass="ui-grid">
+                <h:outputLabel for="t" value="Introduzca la cantidad de casos de prueba: " />
+                <p:spinner id="t" value="#{cubeBean.t}" min="1" max="50"  />
+                <h:outputLabel for="n" value="Introduzca la dimensión del cubo: " />
+                <p:spinner id="n" value="#{cubeBean.n}" min="1" max="100"  />
+                <h:outputLabel for="m" value="Introduzca el número de operaciones: " />
+                <p:spinner id="m" value="#{cubeBean.n}" min="1" max="1000"  />
+                <h:outputLabel for="o1" value="Introduzca la operación: " />
+                <p:inputText id="o1" value="#{cubeBean.o1}"/>
+                <h:outputLabel for="o2" value="Introduzca la operación: " />
+                <p:inputText id="o2" value="#{cubeBean.o2}"/>
+                <h:outputLabel for="o3" value="Introduzca la operación: " />
+                <p:inputText id="o3" value="#{cubeBean.o3}"/>
+                <h:outputLabel for="o4" value="Introduzca la operación: " />
+                <p:inputText id="o4" value="#{cubeBean.o4}"/>
+                <h:outputLabel for="o5" value="Introduzca la operación: " />
+                <p:inputText id="o5" value="#{cubeBean.o5}"/>
+
+
+
+
+            </h:panelGrid>
+
+            <br />
+
+           
+           <p:commandButton action="#{cubeBean.getValues}" value="Sumar"></p:commandButton>     
+
+        </h:form>
+    </h:body>
+</html>
+
